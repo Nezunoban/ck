@@ -1,0 +1,200 @@
+
+
+/* Base Styles */
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+
+body,td,th {
+	color: #FFB500;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	text-shadow: 1px 1px #000;
+}
+body  {
+	background-color: #000;
+}
+
+h1 {
+	color: #fff;
+}
+
+h3 {
+    margin-bottom: .0rem;
+    margin-top: 1.75rem;
+}
+
+ul {
+	display: flex;
+    flex-flow: row wrap;
+    margin-top: .5rem;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+    position: relative;
+	/*
+	margin-bottom: 2rem;
+	*/
+	width: 50%;
+    padding: .1rem;
+    max-width: 90%;
+}
+
+li a:hover,
+li button:hover {
+	color: #00C5FF;
+	background: #FFB500;
+}
+
+
+
+
+button,
+a {
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	border: 0 none transparent;
+	padding: 0;
+	font-size: .8rem;
+	text-shadow: 1px 1px black;
+	cursor: pointer;
+}
+a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+button:hover,
+a:hover {
+	color: #62A9FF;
+	background-color: #fff;
+}
+a:active {
+	text-decoration: none;
+}
+
+a.btn {
+	display: inline-block;
+}
+
+.modal-video-close-btn:hover {
+	background: transparent;
+}
+.modal-video-close-btn:hover:before, .modal-video-close-btn:hover:after{
+	background-color: #FFB500;
+}
+.responsive {
+  	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.title {
+	display: block;
+	position: absolute;
+    bottom: 1rem;
+	right: 0;
+	text-align: right;
+	font-size: 1rem;
+	max-width: 90%;
+	/*
+	color: #62A9FF;
+	padding: .2rem;
+	background: #302625;
+	*/
+	background: #FFB500;
+}
+.d-none {
+	display: none;
+}
+
+.modal-video {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Mid level Screens */
+
+@media all and (min-width: 760px) {
+	.d-md-none {
+		display: none;
+	}
+}
+
+
+/* Larger Screens */
+
+@media all and (min-width: 1001px) {
+	body {
+		background-position: center;
+		background-image: url("../img/calebandkegan2.jpg");
+		background-repeat: no-repeat;
+		/* 
+		background-size: cover;
+		*/
+	}
+	ul {
+		padding-left: 1rem;
+		display: block;
+	}
+	li {
+		list-style: inherit;
+		position: inherit;
+		margin-bottom: 0;
+		width: auto;
+		padding: 0;
+		max-width: 100%;
+	}
+	.title {
+		display: block;
+		position: inherit;
+		left: 0;
+		top: 0;
+		text-align: left;
+		font-size: .8rem;
+		background: transparent;
+		color: #fff;
+		max-width: none;
+	}
+	
+	.container {
+		position: relative;
+		overflow: hidden;
+		margin: 25px auto;
+		width: 1000px;
+		height: 562px;
+		padding-top: 4rem;
+	}
+	
+	.container img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -10;
+	}
+	
+	.container li img {
+		position: absolute;
+		top: 0;
+		left: 1000px;
+		z-index: -50;
+			-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-o-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		transition: all 1s ease;
+	} 
+
+	li a:hover img,
+	li button:hover img {
+		left: 0px;
+	}
+
+
+	.responsive {
+		max-width: none;
+	}
+}
